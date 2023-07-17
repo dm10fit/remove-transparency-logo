@@ -9,6 +9,7 @@ try:
     image = Image.open('%s_logo2.png' %parametro[0])
     
     if image.mode == 'RGBA':
+        print("Convertendo RGBA para RGB")
         bg = Image.new('RGB', image.size, (255, 255, 255))
         bg.paste(image, (0, 0), image)
         bg.save("22345_logo2.png")
